@@ -5,7 +5,7 @@ import (
 
 	"gopkg.in/mgo.v2/bson"
 
-	. "github.com/kkosmrli/rest-example/models"
+	. "github.com/kkosmrli/go-rest-example/models"
 	"gopkg.in/mgo.v2"
 )
 
@@ -25,6 +25,7 @@ func (m *MoviesDAO) Connect() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	log.Println("Database connection established...")
 	db = session.DB(m.Database)
 }
 
